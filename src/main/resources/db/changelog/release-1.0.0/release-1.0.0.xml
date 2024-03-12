@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="v1.0.0/datachangelog/table-create" author="jun" context="dev">
+        <comment>데이터베이스 스키마 관리 테이블 생성</comment>
+        <sqlFile path="databasechangelog.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet id="v1.0.0/user/table-create" author="jun" context="dev">
+        <comment>사용자 테이블 생성</comment>
+        <sqlFile path="user-table-create.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet id="v1.0.0/user/column-add/last-modified-at" author="jun" context="dev">
+        <sqlFile path="add-last-modified-at.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet id="v1.0.0/user/column-delete/last-modified-at" author="jun" context="dev">
+        <sqlFile path="delete-last-modified-at.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+</databaseChangeLog>
